@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <style>
+        body {
+            background-color: #5c5959;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #282828;
+            padding: 40px;
+            margin: 30px; 
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            width: 100%;
+            margin: 30px; 
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            color: #a9a9a9;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #383838;
+            color: white;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .dropdown {
+            appearance: none;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .note {
+            color: #a9a9a9;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 20px; 
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            input,
+            textarea,
+            select {
+                padding: 8px;
+            }
+
+            button {
+                padding: 12px 20px;
+            }
+
+            .note {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            input,
+            textarea,
+            select {
+                padding: 6px;
+            }
+
+            button {
+                padding: 10px 15px;
+            }
+
+            .note {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get started</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="website">Current website URL (if applicable)</label>
+                <input type="url" id="website">
+            </div>
+            <div class="form-group">
+                <label for="budget">Estimated Budget</label>
+                <input type="text" id="budget">
+            </div>
+            <div class="form-group">
+                <label for="services">What services are you looking for?</label>
+                <select id="services" class="dropdown">
+                    <option value="web-development">Web Development</option>
+                    <option value="seo">Wordpress</option>
+                    <option value="marketing">UI/UX</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="project">Tell me a bit about the project</label>
+                <textarea id="project" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="launch-date">Ideal launch date</label>
+                <input type="date" id="launch-date">
+            </div>
+            <div class="form-group">
+                <label for="referral">How did you find me?</label>
+                <input type="text" id="referral">
+            </div>
+            <button type="submit">Connect Us</button>
+        </form>
+        <div class="note">It's free</div>
+    </div>
+</body>
+</html>

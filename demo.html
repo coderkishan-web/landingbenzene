@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+   <style>
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .banner {
+      width: 80%;
+      max-width: 1000px;  /* Maximum width for larger screens */
+      padding: 50px;
+      background-color: #1C2531;
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .banner:hover {
+      transform: rotate(-5deg);
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+    }
+
+    /* Button styling */
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      background-color: #5f4ac3;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn.primary:hover {
+      background-color: #3f2a80;
+    }
+
+    /* Responsive Design */
+
+    /* Tablet Devices */
+    @media (max-width: 1024px) {
+      .banner {
+        width: 90%; /* Use 90% width on tablet */
+        padding: 40px;
+      }
+
+      .banner h1 {
+        font-size: 2.5rem; /* Smaller font size for tablets */
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+
+    /* Mobile Devices */
+    @media (max-width: 768px) {
+      .banner {
+        width: 95%; /* Use 95% width on mobile */
+        padding: 30px;
+      }
+
+      .banner h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+      }
+
+      .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+      }
+    }
+
+    /* Extra Small Devices */
+    @media (max-width: 480px) {
+      .banner {
+        width: 100%; /* Full width on extra small devices */
+        padding: 20px;
+      }
+
+      .banner h1 {
+        font-size: 1.6rem; /* Smaller font size for small screens */
+      }
+
+      .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+      }
+    }
+   </style>
+</head>
+<body>
+    <footer>
+        <div class="banner">
+          <h1>Let's build something <br> great together</h1>
+          <a href="#" class="btn primary">Work with us →</a>
+        </div>   
+    </footer>
+</body>
+</html>

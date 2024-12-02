@@ -4,187 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Started</title>
-    <style>
-        body {
-            background-color: #5c5959;
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
+   <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
-        .container {
-            background-color: #282828;
-            padding: 40px;
-            margin: 30px; 
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:#777;
+	background:rgb(4, 61, 80);
+
+}
+
+.container {
+	max-width:450px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+}
+
+#contact h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:rgb(11, 92, 112);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:rgb(4, 61, 80);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+.dropdown {
+            appearance: none;
             width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+padding: 10px 1px;
         }
-
-        form {
-            width: 100%;
-            margin: 30px; 
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
         label {
             display: block;
             color: #a9a9a9;
             margin-bottom: 5px;
         }
 
-        input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #383838;
-            color: white;
-        }
-
-        textarea {
-            height: 100px;
-            resize: vertical;
-        }
-
-        .dropdown {
-            appearance: none;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .note {
-            color: #a9a9a9;
-            font-size: 12px;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                margin: 20px; 
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            .form-group {
-                margin-bottom: 10px;
-            }
-
-            input,
-            textarea,
-            select {
-                padding: 8px;
-            }
-
-            button {
-                padding: 12px 20px;
-            }
-
-            .note {
-                font-size: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 20px;
-            }
-
-            input,
-            textarea,
-            select {
-                padding: 6px;
-            }
-
-            button {
-                padding: 10px 15px;
-            }
-
-            .note {
-                font-size: 8px;
-            }
-        }
-    </style>
+   </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Get started</h1>
-        <form>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="website">Current website URL (if applicable)</label>
-                <input type="url" id="website">
-            </div>
-            <div class="form-group">
-                <label for="budget">Estimated Budget</label>
-                <input type="text" id="budget">
-            </div>
-            <div class="form-group">
-                <label for="services">What services are you looking for?</label>
-                <select id="services" class="dropdown">
-                    <option value="web-development">Web Development</option>
-                    <option value="seo">Wordpress</option>
-                    <option value="marketing">UI/UX</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="project">Tell me a bit about the project</label>
-                <textarea id="project" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="launch-date">Ideal launch date</label>
-                <input type="date" id="launch-date">
-            </div>
-            <div class="form-group">
-                <label for="referral">How did you find me?</label>
-                <input type="text" id="referral">
-            </div>
-            <button type="submit">Connect Us</button>
+    <div class="container">  
+        <form id="contact" action="" method="post">
+          <h3>Get started</h3>
+          <h4>Contact us today, and get reply with in 24 hours!</h4>
+          <fieldset>
+            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <label for="services">What services are you looking for?</label>
+            <select id="services" class="dropdown">
+                <option value="web-development">Web Development</option>
+                <option value="seo">Wordpress</option>
+                <option value="marketing">UI/UX</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Current Website  http://" type="url" tabindex="4" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Tell me a bit about the project...." tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <input placeholder="How did you find Us?" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
         </form>
-        <div class="note">It's free</div>
-    </div>
+       
+        
+      </div>
 </body>
 </html>

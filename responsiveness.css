@@ -18,7 +18,20 @@
     .content {
         max-width: 90%;
     }
-
+    .aboutsection{
+        height: 60vh;
+        overflow-y: hidden;
+    }
+    .about-image{
+        height: 40vh;
+    }
+    .about-imagebenzene {
+       height: 40vh;
+        background-size: cover;
+        background-position: center;
+        animation: rotate-animation 1.6s ease-in-out forwards;
+      }
+      
     .image-container img {
         max-width: 300px;
     }
@@ -108,6 +121,9 @@
         font-size: 0.9rem;
         padding: 8px 16px;
       }
+       .content-section{
+        height: 60vh;
+      }
     
 }
 
@@ -116,7 +132,12 @@
         flex-direction: column;
         align-items: flex-start;
     }
-
+    .content-section{
+        height: 90vh;
+      }
+      .brandslogo{
+        width: 100px !important;
+      }
     .nav-links {
         flex-direction: row;
         gap: 1rem;
@@ -189,7 +210,9 @@
     .custom-section {
         text-align: center;
         gap: 1rem;
+        padding: 1px;
     }
+    
 
     .content {
         max-width: 100%;
@@ -197,6 +220,7 @@
 
     .image-container img {
         max-width: 250px;
+    
     }
 
     .top-section h1 {
@@ -289,6 +313,9 @@
         font-size: 0.9rem;
     }
     /* hero  */
+    .brandslogo{
+        width: 100px !important;
+      }
     
     .about-image,
     .about-imagebenzene {

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 body {
   font-family: "Arial", sans-serif;
@@ -102,6 +103,7 @@ html{
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .about-white {
   width: 100%;
@@ -194,6 +196,10 @@ html{
         && p{
             font-size: 1.5rem;
             margin-top: 3rem;
+        }
+        && .brandslogo{
+          width: 180px;
+          border-radius: 2px;
         }
     }
 }
@@ -390,32 +396,10 @@ border: 1px solid rgba(0, 0, 0, 0.31);
   margin-bottom: 15px;
 }
 
-.icon .dot {
-  width: 8px;
-  height: 8px;
-  background-color: #5f4ac3;
-  border-radius: 50%;
-  position: relative;
-}
+.icon span i{
+  font-size: 2rem;
+  color: #5f4ac3;
 
-.icon .dot::before,
-.icon .dot::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: #5f4ac3;
-  border-radius: 50%;
-}
-
-.icon .dot::before {
-  top: -12px;
-  left: 0;
-}
-
-.icon .dot::after {
-  bottom: -12px;
-  left: 0;
 }
 
 /* Feature Title */
